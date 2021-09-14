@@ -1,0 +1,39 @@
+buildscript {
+    repositories {
+        gradlePluginPortal()
+    }
+    dependencies {
+        classpath 'gradle.plugin.com.github.jengelman.gradle.plugins:shadow:7.0.0'
+    }
+}
+
+subprojects {
+    group = "org.example.mentoring-v8"
+    apply plugin: 'com.github.johnrengelman.shadow'
+    apply plugin: 'java'
+
+    task wrapper(type: Wrapper) {
+        gradleVersion = '4.10.2'
+    }
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+    compileJava.options.encoding = 'UTF-8'
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        implementation 'org.projectlombok:lombok:1.18.20'
+        annotationProcessor 'org.projectlombok:lombok:1.18.20'
+    }
+
+    task sourceJar(type: Jar) {
+        from sourceSets.main.allJava
+    }
+
+    test {
+        useJUnitPlatform()
+    }
+}
