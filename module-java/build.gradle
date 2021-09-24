@@ -1,0 +1,6 @@
+version '0.0.1'
+
+dependencies {
+    testImplementation 'junit:junit:4.13.2'
+    testRuntimeOnly("org.junit.vintage:junit-vintage-engine:5.8.1")
+}

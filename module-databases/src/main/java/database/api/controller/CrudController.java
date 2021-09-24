@@ -26,6 +26,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping
 @RequiredArgsConstructor
 public class CrudController<T extends AbstractIdentifiableObject> {
+
   @Autowired
   protected CrudService<T> service;
 

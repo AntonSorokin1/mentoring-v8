@@ -1,0 +1,6 @@
+# Project exclude paths
+/.gradle/
+/module-databases/build/
+/module-databases/build/classes/java/main/
+/module-multithreading/build/
+/module-multithreading/build/classes/java/main/
