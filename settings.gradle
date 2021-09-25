@@ -2,4 +2,5 @@ rootProject.name = 'mentoring-v8'
 include 'module-databases'
 include 'module-multithreading'
 include 'module-java'
+include 'module-advanced-multithreading'
 
